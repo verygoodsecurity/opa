@@ -59,7 +59,7 @@ jobs:
         run: echo "::set-output name=go_version::$(cat .go-version)"
 
       - name: Install Go (${{ steps.go_version.outputs.go_version }})
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v5
         with:
           go-version: ${{ steps.go_version.outputs.go_version }}
 
